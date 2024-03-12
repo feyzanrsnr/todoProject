@@ -1,0 +1,97 @@
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 95%;
+    margin: 15px;
+}
+
+
+.container{
+    position: relative;
+    width: 90%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+    color: blanchedalmond;
+}
+
+.container i{
+    margin-right: 15px;
+}
+
+.container-header{
+    padding-left: 8px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    display: flex;
+}
+
+.container-header p{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container-header i{
+    margin-top: 7px;
+}
+
+.container-body{
+    height: 600px;
+    padding: 10px 0;
+}
+
+#ekleBtn{
+
+    position: fixed;
+    bottom: 20px; /* İstenilen dikey konum */
+    right: 20px; /* İstenilen yatay konum */
+    z-index: 9999; /* Diğer öğelerin üzerine çıkması için */
+    padding: 10px 20px;
+    background: #fd7e0d;
+    color: white;
+    border: none;
+    border-radius:50% 50% ;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    font-size :20px;
+
+}
+
+#ekleBtn:hover{
+    background-color: rgba(255, 255, 255,0.2);
+    color: white;
+}
+
+.todo-list{
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+}
+
+.todo-item{
+    display: flex;
+    flex-direction: row; /*default değeri de bu şekilde*/
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    width: 95%;
+}
+
+.todo-item li{
+    flex-grow: 1;
+    font-size: 20px;
+    cursor: default;
+    position: relative;
+}
+
+

@@ -1,0 +1,98 @@
+.popup{
+    background: rgba(0, 0, 1,0.650);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popup-content{
+    margin-top: 100px;
+    height: 400px;
+    width: 400px;
+    background: rgba(253, 126, 13,0.6);
+    border-radius: 10px;
+    position: relative;
+}
+
+#close-popup{
+    background-color: transparent;
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    border: none;
+    color: black;
+    font-size: 18px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+  #gorev-basligi{
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #363d4b;
+    border-radius: 10px;
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.gorev-aciklama{
+    width: 300px;
+    height: 100px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #363d4b;
+    border-radius: 10px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#kaydetBtn{
+    /* margin-top: 25px;
+    text-decoration: none;
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    /* box-shadow: 6px 6px 20px 2px #363d4b; */
+    /* margin-top: 230px;
+    margin-left: 278px;
+    border: none;
+    color:#fd7e0d;
+    background-color: rgb(255, 255, 255); */ 
+    width: 130px;
+    height: 60px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    background: #fd7e0d;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-top: 35px;
+}
+
+#kaydetBtn:hover{
+    background-color:rgba(255, 255, 255, 0.4) ;
+    color:#ffffff;
+    padding: 10px 15px;
+    /* box-shadow: 6px 6px 20px 2px #363d4b; */
+    border: none;
+}
+
+input::placeholder{
+    font-size: 18px;
+    font-style:italic;
+}

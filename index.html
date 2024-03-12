@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="container.css">
+    <link rel="stylesheet" href="selectbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>Günlük Hatırlatıcı</title>
+</head>
+
+<body>
+
+    <p class="header">HOŞ GELDİN FEYZANUR</p>
+
+    <div class="newTask">
+        <button class="fas fa-plus" id="ekleBtn"></button>
+    </div>
+
+    <div class="card">
+        <div class="container">
+            <div class="container-header">
+                <i class="far fa-edit"></i>
+                <p>Yapılacaklar</p>
+            </div>
+
+            <div class="select-box">
+                <div class="options-container">
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="categories" name="category">
+                        <label for="categories">MANAV</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="0" name="category">
+                        <label for="0">MARKET</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="1" name="category">
+                        <label for="1">SPOR</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="2" name="category">
+                        <label for="2">ÖDEV</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="3" name="category">
+                        <label for="3">PROJE</label>
+                    </div>
+
+                </div>
+
+                <div class="selected" style="position: relative;">
+                Kategori Seçin
+                </div>
+
+            </div>
+
+                <div class="container-body">
+                    <ul class="todo-list" id="todo-list">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="popup-content">
+            <button class="fas fa-times" id="close-popup"></button>
+            <input type="text" id="gorev-basligi" class="gorev-baslik" placeholder="Hatırlatıcı Başlığı..">
+            <input type="textarea"  id="gorev-aciklamasi" class="gorev-aciklama" placeholder="Açıklama..">
+            <button id="kaydetBtn">KAYDET</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.querySelector('#ekleBtn').addEventListener('click',function(){
+        document.querySelector('.popup').style.display='flex';
+    })
+    document.querySelector('#close-popup').addEventListener('click',function(){
+        document.querySelector('.popup').style.display='none';
+    })
+    </script>
+    
+
+    <script>
+        const selected = document.querySelector(".selected");
+        const optionsContainer = document.querySelector(".options-container");
+        
+        const optionsList = document.querySelectorAll(".option");
+        
+        selected.addEventListener("click", () => {
+            optionsContainer.classList.toggle("active");
+        });
+        
+        optionsList.forEach(o => {
+          o.addEventListener("click", () => {
+            selected.innerHTML = o.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+          });
+        });
+        </script>
+
+</body>
+</html>
